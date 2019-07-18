@@ -38,14 +38,14 @@ public class SumOfSquares {
      */
     public SumOfSquares() {
         n = 0;
-        sumSq = 1;
+        sumSq = 0;
     }
 
     /**
      * @param value stream of values.
      */
     public void accept(double value) {
-      sumSq *= value;
+        sumSq += value * value;
         n++;
     }
 
@@ -54,7 +54,7 @@ public class SumOfSquares {
      * @param sos2 object of SumOfSquares class.
      */
     public void combine(SumOfSquares sos2) {
-      sumSq *= sos2.getSumSq();
+        sumSq += sos2.getSumSq();
     }
 
     /**
@@ -75,7 +75,7 @@ public class SumOfSquares {
      * Clears the instance variables.
      */
     public void clear() {
-      sumSq = 1;
+        sumSq = 0;
         n = 0;
     }
 
