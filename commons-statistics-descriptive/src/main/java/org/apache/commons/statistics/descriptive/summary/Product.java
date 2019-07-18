@@ -38,15 +38,20 @@ public class Product {
      */
     public Product() {
         n = 0;
-        product = 1;
+        product = 0;
     }
 
     /**
      * @param value stream of values.
      */
     public void accept(double value) {
-      product *= value;
         n++;
+        if(n==1) {
+            product = value;
+        }
+        else {
+            product *= value;
+        }
     }
 
     /**
@@ -75,7 +80,7 @@ public class Product {
      * Clears the instance variables.
      */
     public void clear() {
-      product = 1;
+      product = 0;
         n = 0;
     }
 
